@@ -1,4 +1,4 @@
 # Project-Deep-Learning
-We intend to design, train and test a deep Neural Network implemented using Keras library on a data-set of MRI scans of many patients to predict presence of Brain Tumor. 
+The intention is to design, train and test a deep Neural Network implemented using Keras library on a data-set of images of many cells to predict presence of a malarial infection. 
 
-Edit : Check template_updates.ipynb for updates to main template
+-Note: The Dataset has been downloaded from Kaggle. Visit https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria to download all the images
