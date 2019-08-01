@@ -54,12 +54,14 @@ body{
 	background-color: rgba(255, 255, 255, 0.4);
 	height: 20vw;
 	margin:50px;
+	font-size: 1vw;
 }
 
-#about_head {
+#about-head {
 	padding: 10px;
 	background-color: #0EBFE9; 
-	color: white; margin-top: 10px; 
+	color: white;
+	margin-top: 10px; 
 	width: 100%;
 }
 
@@ -108,5 +110,10 @@ body{
 
 	#image-selector, #predict-button, #selected-image {
 		margin: 1vw;
+	}
+
+	#about {
+		height: 70vw;
+		font-size: 2.5vw;
 	}
 }

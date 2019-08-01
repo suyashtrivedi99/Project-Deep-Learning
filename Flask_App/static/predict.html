@@ -3,7 +3,7 @@
 <head>
 	<title>Prediction</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!--Bootstrap 4 CSS -->
-	<link rel = "stylesheet" type = "text/css" href = "style.css" /> <!-- custom stylesheet-->
+	<link rel = "stylesheet" type = "text/css" href = "style.css" > <!-- custom stylesheet-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- To ensure proper rendering and touch zooming for all devices -->
 </head>
 <body>
@@ -115,7 +115,6 @@
   	</div>
 
   	<div class="container-fluid mx-auto" id="pred-container1">
-
 		<div class="container-fluid mx-auto" id="pred-container2">
 				<input id="image-selector" type="file">
 
@@ -132,33 +131,7 @@
 	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script>
-		let base64Image;
-		$("#image-selector").change(function(){
-			let reader = new FileReader();
-			reader.onload = function(e){
-				let dataURL = reader.result;
-				$('#selected-image').attr("src", dataURL)
-				base64Image = dataURL.replace("data:image/png;base64,", "");
-				console.log(base64Image);
-			}
-			reader.readAsDataURL($("#image-selector")[0].files[0]);
-			$("#prediction").text("");
-		});
-
-		$("#predict-button").click(function(event){
-			let message = {
-				image: base64Image
-			}
-			console.log(message);
-			$.post("http://127.0.0.1:5000/predict", JSON.stringify(message), function(response){
-				$("#prediction").text(response.prediction);
-				console.log('This is html pg res');
-				console.log(response);
-			});
-		});
-
-	</script>
+	<script src="pred_img.js"></script>
 
 	
 
